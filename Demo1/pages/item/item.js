@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    var itemPicture = {};
+    var itemPicture;
 
     WinJS.UI.Pages.define("/pages/item/item.html", {
         // This function is called whenever a user navigates to this page. It
