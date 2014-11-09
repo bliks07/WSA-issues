@@ -63,6 +63,33 @@
         var lightGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY7h4+cp/AAhpA3h+ANDKAAAAAElFTkSuQmCC";
         var mediumGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g8dcZ/AAY/AsAlWFQ+AAAAAElFTkSuQmCC";
 
+        var section1Pictures1 = [
+            { type: "item", picture: darkGray },
+            { type: "item", picture: lightGray },
+            { type: "item", picture: mediumGray }
+        ];
+
+        var section1PicturesList1 = new WinJS.Binding.List(section1Pictures1);
+
+        var section1Pictures2 = [
+            { type: "item", picture: lightGray },
+            { type: "item", picture: mediumGray },
+            { type: "item", picture: darkGray },
+            { type: "item", picture: lightGray },
+            { type: "item", picture: mediumGray }
+        ];
+
+        var section1PicturesList2 = new WinJS.Binding.List(section1Pictures2);
+
+        var section1Pictures3 = [
+            { type: "item", picture: mediumGray },
+            { type: "item", picture: darkGray },
+            { type: "item", picture: lightGray },
+            { type: "item", picture: mediumGray }
+        ];
+
+        var section1PicturesList3 = new WinJS.Binding.List(section1Pictures3);
+
         // Each of these sample groups must have a unique key to be displayed
         // separately.
         var sampleGroups = [
@@ -77,9 +104,9 @@
         // Each of these sample items should have a reference to a particular
         // group.
         var sampleItems = [
-            { group: sampleGroups[0], title: "Item Title: 1", subtitle: "Item Subtitle: 1", description: itemDescription, content: itemContent, backgroundImage: lightGray },
-            { group: sampleGroups[0], title: "Item Title: 2", subtitle: "Item Subtitle: 2", description: itemDescription, content: itemContent, backgroundImage: darkGray },
-            { group: sampleGroups[0], title: "Item Title: 3", subtitle: "Item Subtitle: 3", description: itemDescription, content: itemContent, backgroundImage: mediumGray }
+            { group: sampleGroups[0], title: "Item Title: 1", subtitle: "Item Subtitle: 1", description: itemDescription, content: itemContent, backgroundImage: lightGray, section1Picture: section1PicturesList1 },
+            { group: sampleGroups[0], title: "Item Title: 2", subtitle: "Item Subtitle: 2", description: itemDescription, content: itemContent, backgroundImage: darkGray, section1Picture: section1PicturesList2 },
+            { group: sampleGroups[0], title: "Item Title: 3", subtitle: "Item Subtitle: 3", description: itemDescription, content: itemContent, backgroundImage: mediumGray, section1Picture: section1PicturesList3 }
         ];
 
         return sampleItems;

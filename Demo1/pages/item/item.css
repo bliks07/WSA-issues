@@ -2,3 +2,10 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
+#basicFlipView
+{
+    width: 480px;
+    height: 270px;
+    border: solid 1px black;    
+}
