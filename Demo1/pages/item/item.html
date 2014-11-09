@@ -26,6 +26,20 @@
         <section class="content" aria-label="Main content" role="main">
 
             <!-- TODO: Content goes here. -->
+            <div id="ItemTemplate" data-win-control="WinJS.Binding.Template">
+                <div>
+                    <img src="#" data-win-bind="src: picture; alt: title" />
+                </div>
+            </div>
+
+            <div id="basicFlipView"
+                 data-win-control="WinJS.UI.FlipView"
+                 data-win-options="{
+                    itemDataSource : select('.pagecontrol').winControl.section1DataSource,
+                    itemTemplate : ItemTemplate
+                 }">
+
+            </div>
 
         </section>
     </div>
