@@ -1,8 +1,6 @@
 ﻿(function () {
     "use strict";
 
-    var itemPicture;
-
     WinJS.UI.Pages.define("/pages/item/item.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
@@ -11,9 +9,9 @@
             element.querySelector(".titlearea .pagetitle").textContent = item.title;
 
             // TODO: Initialize the page here.
-            itemPicture = item.section1Picture;
+            var flipView = element.querySelector("#basicFlipView");
+            flipView.winControl.itemDataSource = item.section1Picture.dataSource;
         },
 
-        section1DataSource: itemPicture
     });
 })();
